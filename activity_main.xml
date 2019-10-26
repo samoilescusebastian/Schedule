@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    >
+
+    <com.example.schedule.LineView
+        android:id="@+id/longULineView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.schedule.LineView
+        android:id="@+id/mediumULineView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.schedule.LineView
+        android:id="@+id/shortULineView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.schedule.LineView
+        android:id="@+id/longDLineView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.schedule.LineView
+        android:id="@+id/mediumDLineView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.schedule.LineView
+        android:id="@+id/shortDLineView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            app:srcCompat="@drawable/logo" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copyright©"
+        android:textStyle="italic"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/appName"
+        android:text= "Schedule"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#212121"
+        android:textSize="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="16dp"
+        android:paddingTop="6dp"
+        android:letterSpacing="0.06"/>
+
+    <Button
+        android:id="@+id/newButton"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="152dp"
+        android:background="@drawable/custom_button"
+        android:text="New"
+        android:textColor="#FFFFFF" />
+    <Button
+        android:id="@+id/openButton"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/newButton"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_button"
+        android:text="Open"
+        android:textColor="#FFFFFF" />
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/openButton"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_button"
+        android:text="Delete"
+        android:textColor="#FFFFFF" />
+
+
+
+</RelativeLayout>

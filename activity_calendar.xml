@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    >
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        />
+    <Button
+        android:id="@+id/selectDateButton"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/calendarView"
+        android:layout_height="64dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginLeft="18dp"
+        android:text="Select Date"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="18dp"
+        android:textColor="#FFFF"
+        android:background="@drawable/custom_button"
+        />
+
+
+</RelativeLayout>

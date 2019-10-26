@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <TextView
+        android:id="@+id/currentDay"
+        android:layout_width="126dp"
+        android:layout_height="54dp"
+        android:text="Monday"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/custom_text_view"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+         />
+    <TextView
+        android:id="@+id/currentActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/currentDay"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:text="Activity no: 1"
+        android:textSize="16sp"
+        />
+    <LinearLayout
+        android:id="@+id/edit_query"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:layout_below="@+id/currentDay"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/frame">
+        <LinearLayout
+            android:id="@+id/linearLayoutData"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="0.18"
+            android:weightSum="1" >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="18dp"
+                android:layout_weight ="0.55"
+                >
+                <TextView
+                    android:id="@+id/startHourText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center"
+                    android:text="Start Hour"
+                    android:textSize="18dp"
+                    android:background="#adc2d6"/>
+
+                <NumberPicker
+                    android:id="@+id/startHour"
+                    android:layout_width="40dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop= "8dp"
+                    android:layout_marginStart = "20dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+
+
+                <TextView
+                    android:id="@+id/endHourText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center"
+                    android:text="End Hour"
+                    android:textSize="18dp"
+                    android:background="#adc2d6"/>
+
+                <NumberPicker
+                    android:id="@+id/endHour"
+                    android:layout_width="40dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop= "8dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                />
+
+
+            </LinearLayout>
+        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayoutInfo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="0.68"
+                android:orientation="vertical"
+                android:weightSum="1"
+                 >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.28"
+                    android:weightSum="1"
+                    >
+                    <LinearLayout
+                        android:layout_marginTop="24dp"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.38" >
+                        <TextView
+                            android:id="@+id/textActivityName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginStart="18dp"
+                            android:text="Activity Name"
+                            android:textSize="18dp"
+                            android:background="#adc2d6" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.62" >
+                        <EditText
+                            android:id="@+id/activityName"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:textAlignment="center"
+                            android:layout_marginTop="2dp"
+                            android:hint="Insert activity name"
+                            android:background="@drawable/edit_inf_frame"
+
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.28"
+                    android:weightSum="1"
+                    >
+                    <LinearLayout
+                        android:layout_marginTop="24dp"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.38" >
+
+                        <TextView
+                            android:id="@+id/textLocation"
+                            android:layout_width="112dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:background="#adc2d6"
+                            android:gravity="center"
+                            android:text="Location"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.62" >
+                        <EditText
+                            android:id="@+id/location"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:textAlignment="center"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/edit_inf_frame"
+                            android:hint="Insert activity location"
+
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.28"
+                    android:weightSum="1"
+                    >
+                    <LinearLayout
+                        android:layout_marginTop="24dp"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.38" >
+
+                        <TextView
+                            android:id="@+id/textDescription"
+                            android:layout_width="112dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:background="#adc2d6"
+                            android:text="Description"
+                            android:gravity="center"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.62" >
+                        <EditText
+                            android:id="@+id/description"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="2dp"
+                            android:textAlignment="center"
+                            android:background="@drawable/edit_inf_frame"
+                            android:hint="Add a short description"
+
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.16" >
+                    <RadioGroup
+                        android:id="@+id/weekGroupButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <RadioButton
+                            android:id="@+id/weeklyButton"
+                            android:layout_width="1dp"
+                            android:layout_weight="0.33"
+                            android:layout_height="match_parent"
+                            android:text="Weekly"
+                            android:buttonTint="#00a6ff"
+                            android:checked="true"
+                            />
+                        <RadioButton
+                            android:id="@+id/oddWeekButton"
+                            android:layout_width="1dp"
+                            android:layout_weight="0.33"
+                            android:layout_height="match_parent"
+                            android:text="Odd week"
+                            android:buttonTint="#00a6ff"
+                            android:checked="false"
+                            />
+                        <RadioButton
+                            android:id="@+id/evenWeekButton"
+                            android:layout_width="1dp"
+                            android:layout_weight="0.33"
+                            android:layout_height="match_parent"
+                            android:text="Even Week"
+                            android:buttonTint="#00a6ff"
+                            android:checked="false"
+                            />
+
+
+                    </RadioGroup>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="0.18"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/nextActivityButton"
+                android:layout_width="240dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                android:background="#adc2d6"
+                android:text="Next Activity" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="80dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        >
+        <Button
+            android:id="@+id/prevButton"
+            android:layout_width = "0dp"
+            android:layout_weight ="0.4"
+            android:layout_height="70dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/custom_button"
+            android:textColor="#FFFF"
+            android:layout_marginTop="6dp"
+            android:enabled="false"
+            android:text="Prev Day" />
+
+        <ImageButton
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="0.2"
+            android:layout_marginBottom="14dp"
+            android:background="#55FFFFFF"
+            android:src="@drawable/cancel_image" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="0.4"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/custom_button"
+            android:textColor="#FFFF"
+            android:layout_marginTop="6dp"
+            android:text="Next Day" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

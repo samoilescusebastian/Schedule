@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="12dp"
+    >
+    <TextView
+        android:id="@+id/currentDay"
+        android:layout_width= "match_parent"
+        android:layout_height="54dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/custom_button"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+    <LinearLayout
+        android:id="@+id/activitiesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/currentDay"
+        android:layout_marginTop="6dp"
+        android:weightSum="1"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:id="@+id/currentActivityLayout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="0.15"
+            android:weightSum="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/currentActivityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:text="Current activity"
+                android:textColor="#212121"
+                android:fontFamily="sans-serif-medium"
+                />
+            <ListView
+                android:id="@+id/currentActivityListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_inf_frame"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/nextActivitiesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:weightSum="1"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/nextActivitiesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:text="Next activities"
+                android:textColor="#212121"
+                android:fontFamily="sans-serif-medium" />
+
+            <ListView
+                android:id="@+id/nextActivitiesListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_inf_frame" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="0.15"
+            android:weightSum="1"
+            >
+            <Button
+                android:id="@+id/chooseDateButton"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/custom_button"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="4dp"
+                android:text="Choose Date"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                />
+            <Button
+                android:id="@+id/newActivityButton"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/custom_button"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="4dp"
+                android:text="New Activity"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    </RelativeLayout>
